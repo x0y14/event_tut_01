@@ -1,0 +1,26 @@
+﻿namespace = tut_invasion
+
+tut_invasion.0001 = {
+    scope = none
+    hidden = yes
+
+    trigger = {
+        always = yes
+        NOT = { exists = global_var:ennemi_has_appeared }
+    }
+
+    immediate = {
+        debug_log = "ennemi has appeared!"
+        debug_log_date = yes
+
+        spawn_lemale_character_effect = yes
+        scope:lemale = {
+            save_scope_as = story_owner
+            create_story = story_tut_invasion
+        }
+    }
+}
+
+tut_invasion.0002 = {
+
+}

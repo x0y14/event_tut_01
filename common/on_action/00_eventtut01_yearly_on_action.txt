@@ -1,0 +1,11 @@
+﻿yearly_global_pulse = {
+    on_actions = {
+        invasion_tut_01_on_action
+    }
+}
+
+invasion_tut_01_on_action = {
+    events = {
+        tut_invasion.0001
+    }
+}

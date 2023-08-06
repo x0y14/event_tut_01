@@ -1,0 +1,12 @@
+﻿#on_game_start_after_lobby = {
+#    on_actions = {
+#        eventtut01_on_game_start_after_lobby
+#    }
+#}
+#
+#eventtut01_on_game_start_after_lobby = {
+#    trigger = { always = yes }
+#    effect = {
+#
+#    }
+#}

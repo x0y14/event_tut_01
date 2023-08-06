@@ -1,0 +1,6 @@
+﻿lemale_character_template = {
+    age = 16
+    gender = male
+    faith = faith:orthodox
+    culture = culture:mongol
+}

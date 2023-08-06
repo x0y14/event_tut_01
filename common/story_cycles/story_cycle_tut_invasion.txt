@@ -1,0 +1,44 @@
+﻿story_tut_invasion = {
+    on_setup = {
+        story_owner = {
+
+        }
+        set_global_variable = {
+            name = ennemi_has_appeared
+            value = yes
+        }
+    }
+    on_end = {
+
+    }
+    on_owner_death = {
+        story_owner = {
+            save_scope_as = old_ennemi
+            if = { # もし子供がいれば
+                limit = {
+                    any_child = { count >= 1 }
+                }
+                random_child = {
+                    save_scope_as = new_ennemi
+                    save_scope_as = new_story_owner
+                }
+            }
+            else = {
+                create_character = {
+                    name = "Lemale"
+                    location = scope:lemales_birthplace
+                    template = lemale_character_template
+                    father = scope:old_ennemi
+                    save_scope_as = new_ennemi
+                }
+                scope:new_ennemi = {
+                    save_scope_as = new_story_owner
+                }
+            }
+        }
+        make_story_owner = scope:new_story_owner
+        debug_log = "Successfully replaced the Ennemi"
+        debug_log_date = yes
+
+    }
+}
